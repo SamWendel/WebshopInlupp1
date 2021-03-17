@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Inlupp1.css">
+    <title>Shopping cart</title>
+    <style>
+        body
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        input[type=submit] {
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+        </style>
+</head>
+
+<body style="background-color:rgb(212, 212, 212);">
+    <div class="header">
+        <h1>Webshop</h1>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+        </ul>
+    </div>
+
+
+    <div class="container" style="margin-top: 50px;background-image: url('https://w.wallhaven.cc/full/42/wallhaven-421ygm.jpg');">
+      <div id="productResult"></div>
+    </div>
+
+
+    <div style="margin-top: 50px; margin-bottom: 100px;" class="container">
+        <form name="personform" onsubmit="return validateForm()" method="post">
+          <div style="color: red;" id="returnValName"></div>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <div style="color: red;" id="returnValLname"></div>
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+          <div style="color: red;" id="returnValPhone"></div>
+          <label for="pnumber">Phone number</label>
+          <input type="text" id="pnumber" name="phonenumber" placeholder="Your phone number..">
+
+          <div style="color: red;" id="returnValEmail"></div>
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Your Email..">
+
+          <div style="color: red;" id="returnValAddress"></div>
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" placeholder="Your address..">
+          <div id="thanks"></div>
+          <br>
+    
+          <input class="btn btn-primary" type="submit" value="Buy">
+        </form>
+    </div>
+      <script src="Inlupp1.js"></script>
+      <script>resultProduct();</script>
+</body>
+</html>
